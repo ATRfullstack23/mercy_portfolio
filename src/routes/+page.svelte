@@ -72,15 +72,17 @@
   const ctaImage = '/mercy/Screenshot_20260403_122626_Instagram.jpg';
   const archiveShots = [
     { src: '/mercy/Screenshot_20260403_121213_Instagram.jpg', alt: 'Black dress portrait indoors', wide: false },
-    { src: '/mercy/Screenshot_20260403_121333_Instagram.jpg', alt: 'Window portrait in black lace', wide: false },
-    { src: '/mercy/Screenshot_20260403_121547_Instagram.jpg', alt: 'Oversized sweater pose by window', wide: false },
-    { src: '/mercy/Screenshot_20260403_121913_Instagram.jpg', alt: 'Boudoir portrait on bed', wide: true },
+    { src: '/mercy/IMG_20260403_230604_459.jpg.jpeg', alt: 'Portrait in green dress lying in the grass', wide: true },
     { src: '/mercy/Screenshot_20260403_122015_Instagram.jpg', alt: 'Black and white bodysuit portrait', wide: false },
-    { src: '/mercy/Screenshot_20260403_122038_Instagram.jpg', alt: 'Black and white seated bed portrait', wide: false },
-    { src: '/mercy/Screenshot_20260403_122115_Instagram.jpg', alt: 'Black and white tailored portrait', wide: false },
-    { src: '/mercy/Screenshot_20260403_122310_Instagram.jpg', alt: 'Black and white leather jacket portrait', wide: false },
-    { src: '/mercy/Screenshot_20260403_122521_Instagram.jpg', alt: 'Red lace indoor portrait', wide: true },
     { src: '/mercy/Screenshot_20260403_122608_Instagram.jpg', alt: 'Soft white dress portrait holding camera', wide: false },
+    { src: '/mercy/Screenshot_20260403_122521_Instagram.jpg', alt: 'Red lace indoor portrait', wide: true },
+    { src: '/mercy/Screenshot_20260403_122115_Instagram.jpg', alt: 'Black and white tailored portrait', wide: false },
+    { src: '/mercy/IMG_20260403_231438_148.jpg.jpeg', alt: 'Green dress portrait seated in the grass', wide: false },
+    { src: '/mercy/Screenshot_20260403_121913_Instagram.jpg', alt: 'Boudoir portrait on bed', wide: true },
+    { src: '/mercy/Screenshot_20260403_122310_Instagram.jpg', alt: 'Black and white leather jacket portrait', wide: false },
+    { src: '/mercy/Screenshot_20260403_121547_Instagram.jpg', alt: 'Oversized sweater pose by window', wide: false },
+    { src: '/mercy/Screenshot_20260403_122038_Instagram.jpg', alt: 'Black and white seated bed portrait', wide: false },
+    { src: '/mercy/Screenshot_20260403_121333_Instagram.jpg', alt: 'Window portrait in black lace', wide: false },
     { src: '/mercy/Screenshot_20260403_122806_Instagram.jpg', alt: 'Black and white seated side profile portrait', wide: false }
   ];
 
@@ -395,7 +397,7 @@
   .hero-chip strong,.hero-chip span{display:block;color:#171717;text-transform:uppercase}.hero-chip strong{font-size:.62rem;letter-spacing:.1em}.hero-chip span{margin-top:.18rem;font-size:.54rem;letter-spacing:.14em;opacity:.6}
   .hero-footer{position:absolute;right:1.2rem;bottom:1rem;left:1.2rem;z-index:2;display:flex;justify-content:space-between;gap:1rem;color:rgba(255,245,235,.86);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase}
   .intro-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.7fr);gap:1.5rem;align-items:start}
-  .tag{margin:0 0 .5rem;padding:0;color:var(--orange-deep);font-family:var(--body-font);font-size:.56rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.tag.light{color:#ff9acb}.cta-tag{color:rgba(23,10,2,.72)}
+  .tag{margin:0 0 .32rem;padding:0;color:var(--orange-deep);font-family:var(--body-font);font-size:.56rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.tag.light{color:#ff9acb}.cta-tag{color:rgba(23,10,2,.72)}
   h1,h2,h3,p{margin:0}.intro-copy{display:grid;gap:1rem}.intro-copy h1{max-width:13ch;font-size:clamp(1.4rem,3vw,2.45rem);line-height:1;letter-spacing:-.03em;text-transform:uppercase}
   .muted{color:var(--muted);line-height:1.6;font-size:.76rem}
   .intro-card{display:grid;gap:.8rem}.intro-thumb{min-height:245px;border-radius:.4rem;position:relative;overflow:hidden;box-shadow:var(--shadow)}.intro-thumb img{width:100%;height:100%;object-fit:cover;object-position:center 24%}
