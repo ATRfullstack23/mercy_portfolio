@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#0B0B0B"/>
+  <circle cx="515" cy="280" r="174" fill="#8B0000" fill-opacity=".28"/>
+  <rect x="64" y="64" width="672" height="872" rx="28" stroke="#F5EFE9" stroke-opacity=".2" stroke-width="3"/>
+  <text x="102" y="148" fill="#F5EFE9" fill-opacity=".68" font-family="Arial, sans-serif" font-size="20" letter-spacing="7">STUDIO QUIET</text>
+  <path d="M207 711c48-160 120-260 239-260 90 0 163 59 219 174-111-37-261 2-458 86Z" fill="#2B2020"/>
+</svg>

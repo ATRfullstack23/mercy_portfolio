@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" fill="none">
+  <rect width="1000" height="1200" fill="#0A0A0A"/>
+  <circle cx="777" cy="222" r="200" fill="#8B0000" fill-opacity=".34"/>
+  <circle cx="278" cy="911" r="200" fill="#FF78C4" fill-opacity=".08"/>
+  <path d="M133 812c119-150 252-243 384-243 114 0 224 52 350 163v332H133V812Z" fill="#1A0A0E"/>
+  <rect x="92" y="92" width="816" height="1016" rx="32" stroke="#F5EFE9" stroke-opacity=".18" stroke-width="3"/>
+  <text x="130" y="175" fill="#F5EFE9" fill-opacity=".6" font-family="Arial, sans-serif" font-size="24" letter-spacing="8">FEATURE PANEL</text>
+  <text x="126" y="632" fill="#F5EFE9" font-family="Georgia, serif" font-size="150">Quiet</text>
+  <text x="126" y="740" fill="#F5EFE9" font-family="Georgia, serif" font-size="150">Luxury</text>
+  <text x="130" y="823" fill="#F5EFE9" fill-opacity=".56" font-family="Arial, sans-serif" font-size="28" letter-spacing="6">DEEP RED / BLUSH LIGHT / FILM GRAIN / GLASS PANELS</text>
+</svg>

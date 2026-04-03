@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+  <rect width="1600" height="1000" fill="#0B0B0B"/>
+  <circle cx="1260" cy="168" r="190" fill="#FF78C4" fill-opacity=".12"/>
+  <circle cx="1186" cy="230" r="260" fill="#8B0000" fill-opacity=".28"/>
+  <path d="M0 830c160-114 306-163 431-143 144 24 252 109 406 119 179 12 349-69 763-324v518H0V830Z" fill="#190B10"/>
+  <path d="M305 719c57-167 172-275 307-275 89 0 159 41 231 122-142-23-281 18-538 153Z" fill="#312625"/>
+  <rect x="80" y="82" width="1440" height="836" rx="34" stroke="#F5EFE9" stroke-opacity=".22" stroke-width="3"/>
+  <text x="104" y="174" fill="#F5EFE9" font-family="Arial, sans-serif" font-size="24" letter-spacing="7">COVER STORY</text>
+  <text x="98" y="655" fill="#F5EFE9" font-family="Georgia, serif" font-size="180">Noir Bloom</text>
+  <text x="104" y="720" fill="#F5EFE9" fill-opacity=".6" font-family="Arial, sans-serif" font-size="28" letter-spacing="5">BEAUTY / SHADOW / LACQUER / SPRING</text>
+</svg>

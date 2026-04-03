@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" fill="none">
+  <rect width="900" height="1200" fill="#090909"/>
+  <circle cx="683" cy="228" r="176" fill="#8B0000" fill-opacity=".34"/>
+  <circle cx="691" cy="236" r="100" fill="#FF78C4" fill-opacity=".2"/>
+  <path d="M180 947c65-256 160-424 316-424 106 0 189 72 246 212-150-56-345-11-562 212Z" fill="#261B1A"/>
+  <path d="M424 314c-76 0-142 62-142 150v171h283V464c0-88-65-150-141-150Z" fill="#27181B"/>
+  <path d="M348 479c23-69 62-110 116-110 57 0 99 43 119 114l18 97c10 52-18 94-70 94H398c-52 0-81-42-71-94l21-101Z" fill="#C98E77"/>
+  <path d="M340 449c38-77 95-123 165-123 58 0 101 24 140 66-54-15-105-17-156-7-53 10-103 31-149 64Z" fill="#121212"/>
+  <rect x="66" y="66" width="768" height="1068" rx="26" stroke="#F5EFE9" stroke-opacity=".22" stroke-width="4"/>
+  <text x="92" y="132" fill="#F5EFE9" fill-opacity=".64" font-family="Arial, sans-serif" font-size="22" letter-spacing="7">CAMPAIGN / 2026</text>
+  <text x="92" y="1016" fill="#F5EFE9" font-family="Georgia, serif" font-size="110">After</text>
+  <text x="92" y="1096" fill="#F5EFE9" font-family="Georgia, serif" font-size="110">Midnight</text>
+</svg>

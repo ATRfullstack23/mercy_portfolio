@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" fill="none">
+  <rect width="900" height="1200" fill="#070707"/>
+  <rect x="110" y="142" width="680" height="916" rx="36" fill="#0F0F0F" stroke="#F5EFE9" stroke-opacity=".18" stroke-width="3"/>
+  <circle cx="455" cy="418" r="206" fill="#8B0000" fill-opacity=".24"/>
+  <circle cx="455" cy="418" r="132" fill="#FF78C4" fill-opacity=".18"/>
+  <path d="M302 684c33-138 101-213 168-213 86 0 135 76 154 213-57-32-115-47-171-47-53 0-104 14-151 47Z" fill="#291F1D"/>
+  <path d="M389 588c13-26 37-43 63-43 25 0 50 14 69 39-29-9-63-14-96-12-12 1-24 3-36 7Z" fill="#C48B75"/>
+  <path d="M352 643c30-68 87-122 158-122 44 0 81 17 116 50-29-8-59-12-90-12-72 0-131 30-184 84Z" fill="#141414"/>
+  <text x="170" y="228" fill="#F5EFE9" fill-opacity=".66" font-family="Arial, sans-serif" font-size="20" letter-spacing="8">MOTION STUDY</text>
+  <text x="165" y="952" fill="#F5EFE9" font-family="Georgia, serif" font-size="96">Velvet</text>
+  <text x="165" y="1030" fill="#F5EFE9" font-family="Georgia, serif" font-size="96">Static</text>
+</svg>

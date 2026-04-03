@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#080808"/>
+  <circle cx="232" cy="778" r="190" fill="#8B0000" fill-opacity=".18"/>
+  <rect x="66" y="66" width="668" height="868" rx="24" stroke="#F5EFE9" stroke-opacity=".2" stroke-width="3"/>
+  <text x="104" y="148" fill="#F5EFE9" fill-opacity=".68" font-family="Arial, sans-serif" font-size="20" letter-spacing="7">NIGHT LEDGER</text>
+  <path d="M184 721c104-88 195-132 302-132 101 0 193 35 252 96-122-8-271 5-554 36Z" fill="#1C0D12"/>
+</svg>

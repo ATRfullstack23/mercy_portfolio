@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" fill="none">
+  <rect width="800" height="1000" fill="#090909"/>
+  <circle cx="586" cy="204" r="150" fill="#FF78C4" fill-opacity=".14"/>
+  <circle cx="550" cy="222" r="210" fill="#8B0000" fill-opacity=".24"/>
+  <rect x="66" y="66" width="668" height="868" rx="24" stroke="#F5EFE9" stroke-opacity=".18" stroke-width="3"/>
+  <text x="104" y="148" fill="#F5EFE9" fill-opacity=".68" font-family="Arial, sans-serif" font-size="20" letter-spacing="7">PARIS FITTING</text>
+  <path d="M182 772c84-173 179-251 305-251 79 0 145 35 218 114-138-26-314 21-523 137Z" fill="#261818"/>
+</svg>
