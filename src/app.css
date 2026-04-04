@@ -3,7 +3,7 @@
   --muted: #666054;
   --line: #ddd5c8;
   --paper: #f4efe7;
-  --orange-deep: #ff4fa3;
+  --orange-deep: #5f4438;
   --shadow: 0 24px 60px rgba(22, 14, 10, 0.08);
   --display-font: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --body-font: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -56,5 +56,5 @@ select {
 
 ::selection {
   color: white;
-  background: rgba(255, 79, 163, 0.45);
+  background: rgba(95, 68, 56, 0.45);
 }
