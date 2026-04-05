@@ -1,18 +1,46 @@
 <script>
+  import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import '../app.css';
 
   const currentYear = new Date().getFullYear();
+  const footerFeatureImage = '/mercy/Screenshot_20260403_122626_Instagram.jpg';
   let menuOpen = false;
   let headerScrolled = false;
   const navLinks = [
-    { label: 'Home', href: '#top' },
-    { label: 'Gallery', href: '#archive' },
-    { label: 'Shop', href: '#shop-favorites' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: '/#top' },
+    { label: 'Gallery', href: '/#archive' },
+    { label: 'Shop', href: '/#shop-favorites' },
+    { label: 'About', href: '/#about' },
+    { label: 'Contact', href: '/#contact' }
   ];
-
+  const footerNavigate = [
+    { label: 'Home', href: '/#top' },
+    { label: 'About', href: '/#about' },
+    { label: 'Shop', href: '/#shop-favorites' },
+    { label: 'Gallery', href: '/#archive' },
+    { label: 'Contact', href: '/#contact' }
+  ];
+  const footerConnect = [
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/mercyandreayoga?igsh=YjJveTIwMmZ6YmI2',
+      external: true
+    },
+    { label: 'Contact', href: '/#contact', external: false }
+  ];
+  const footerSocial = [
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/mercyandreayoga?igsh=YjJveTIwMmZ6YmI2',
+      external: true
+    },
+    {
+      label: 'Email',
+      href: 'mailto:mercyfarrell@yahoo.com',
+      external: false
+    }
+  ];
   onMount(() => {
     const updateHeader = () => {
       headerScrolled = window.scrollY > Math.max(48, window.innerHeight * 0.18);
@@ -29,7 +57,7 @@
   <header class:menu-open={menuOpen} class:scrolled={headerScrolled} class="mini-top">
     <div class="brand-wrap">
       <span class="brand-index">01 / Wellness Journal</span>
-      <a class="brand-name" href="#top">Mercy Andrea</a>
+      <a class="brand-name" href="/#top">Mercy Andrea</a>
     </div>
 
     <button
@@ -54,30 +82,85 @@
   <slot />
 
   <footer class="footer-band" id="contact">
-    <div>
-      <p>CONTACT</p>
-      <span>Mercy Andrea Studio. Wellness, beauty, and conscious living. {currentYear}</span>
+    {#if $page.url.pathname === '/'}
+      <section class="footer-hero">
+        <div class="footer-hero-visual">
+          <img src={footerFeatureImage} alt="Black and white portrait of Mercy seated in a chair" />
+        </div>
+        <div class="footer-hero-copy">
+          <p class="footer-kicker">Join The Journey</p>
+          <h2>Health, wellness, and conscious beauty can be lived gently.</h2>
+          <p>
+            Follow along for yoga, somatics, meditation, holistic beauty, and a slower, more
+            mindful way of living.
+          </p>
+        </div>
+      </section>
+    {/if}
+
+    <div class="footer-shell">
+      <div class="footer-brand">
+        <a class="footer-mark" href="/#top">Mercy Andrea</a>
+        <p class="footer-copy">
+          Visual journal of wellness, beauty, and conscious living. Available for collaborations,
+          campaigns, and partnerships worldwide.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-label">Navigate</p>
+        <div class="footer-stack">
+          {#each footerNavigate as item}
+            <a class="footer-text-link" href={item.href}>{item.label}</a>
+          {/each}
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-label">Connect</p>
+        <div class="footer-stack">
+          {#each footerConnect as item}
+            <a
+              class="footer-text-link"
+              href={item.href}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noreferrer' : undefined}
+            >
+              {item.label}
+            </a>
+          {/each}
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-label">Follow</p>
+        <div class="footer-links">
+          {#each footerSocial as item}
+            <a
+              href={item.href}
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noreferrer' : undefined}
+              aria-label={item.label}
+            >
+              {#if item.label === 'Instagram'}
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4.25"></circle>
+                  <circle cx="17.5" cy="6.5" r="1.1" class="icon-fill"></circle>
+                </svg>
+              {:else}
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3.5 6.5h17v11h-17z"></path>
+                  <path d="M4.5 7.5 12 13l7.5-5.5"></path>
+                </svg>
+              {/if}
+            </a>
+          {/each}
+        </div>
+      </div>
     </div>
-    <div class="footer-links">
-      <a
-        href="https://www.instagram.com/mercyandreayoga?igsh=YjJveTIwMmZ6YmI2"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Instagram"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-          <circle cx="12" cy="12" r="4.25"></circle>
-          <circle cx="17.5" cy="6.5" r="1.1" class="icon-fill"></circle>
-        </svg>
-      </a>
-      <a href="mailto:mercyfarrell@yahoo.com" aria-label="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3.5 6.5h17v11h-17z"></path>
-          <path d="M4.5 7.5 12 13l7.5-5.5"></path>
-        </svg>
-      </a>
-    </div>
+
+    <p class="footer-legal">Copyright {currentYear} Mercy Andrea. All rights reserved.</p>
   </footer>
 </div>
 
@@ -103,14 +186,30 @@
   .mini-top.scrolled .main-nav a:hover{color:#171717;background:rgba(17,17,17,.06)}
   .mini-top.scrolled .menu-toggle{border-color:rgba(17,17,17,.12);background:rgba(255,255,255,.34)}
   .mini-top.scrolled .menu-toggle span{background:#171717;box-shadow:none}
-  .footer-band{display:flex;justify-content:space-between;gap:1rem;margin-top:1.2rem;padding:1.5rem 0 0;border-top:1px solid var(--line)}
-  .footer-band p{margin-bottom:.2rem;font-size:.78rem;font-weight:700;letter-spacing:.12em}
-  .footer-band span{color:var(--muted);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase}
-  .footer-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.7rem}
-  .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:2.3rem;height:2.3rem;border:1px solid rgba(28,24,21,.12);border-radius:999px;color:#241d18;background:rgba(255,255,255,.52);transition:transform .22s ease,border-color .22s ease,color .22s ease}
-  .footer-links a:hover{transform:translateY(-2px);border-color:rgba(255,79,163,.38);color:#ff4fa3}
-  .footer-links svg{width:.9rem;height:.9rem;stroke:currentColor;stroke-width:1.7;fill:none}
+  .footer-band{display:grid;gap:2rem;margin-top:1.4rem;padding:clamp(1rem,3vw,1.5rem);border:1px solid var(--ink-edge);border-radius:1rem;background:linear-gradient(180deg,rgba(7,7,7,.99),rgba(4,4,4,.99));color:#f1ece6;box-shadow:0 26px 70px rgba(0,0,0,.26)}
+  .footer-hero{display:grid;grid-template-columns:minmax(260px,.82fr) minmax(0,1fr);gap:1.1rem;align-items:end;padding-bottom:.5rem;border-bottom:1px solid var(--ink-line)}
+  .footer-hero-visual{min-height:300px;overflow:hidden;border-radius:.8rem;box-shadow:0 24px 60px rgba(0,0,0,.32)}
+  .footer-hero-visual img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+  .footer-hero-copy{display:grid;gap:1rem;padding:clamp(.3rem,2vw,.8rem) 0}
+  .footer-kicker{margin:0;color:rgba(255,255,255,.42);font-size:.62rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+  .footer-hero-copy h2{margin:0;max-width:12ch;color:#f5f2ec;font-size:clamp(1.3rem,2.6vw,1.85rem);line-height:1.02;letter-spacing:-.03em}
+  .footer-hero-copy p{margin:0;max-width:30rem;color:rgba(255,255,255,.68);font-size:.82rem;line-height:1.75}
+  .footer-shell{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(140px,.7fr));gap:1.5rem;align-items:start}
+  .footer-brand,.footer-column,.footer-stack{display:grid}
+  .footer-brand{gap:1rem;max-width:22rem}
+  .footer-mark{font-family:var(--display-font);font-size:clamp(1.2rem,2.4vw,1.65rem);letter-spacing:.14em;text-transform:uppercase}
+  .footer-copy{color:rgba(255,255,255,.62);font-size:.82rem;line-height:1.75}
+  .footer-column{gap:.9rem}
+  .footer-label{margin:0;color:rgba(255,255,255,.36);font-size:.64rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
+  .footer-stack{gap:.8rem}
+  .footer-text-link{color:#f3eee8;font-size:.82rem;transition:color .22s ease,transform .22s ease}
+  .footer-text-link:hover{color:#ffffff;transform:translateX(3px)}
+  .footer-links{display:flex;flex-wrap:wrap;gap:.75rem}
+  .footer-links a{display:inline-flex;align-items:center;justify-content:center;width:3rem;height:3rem;border:1px solid rgba(255,255,255,.12);border-radius:999px;color:#f1ece6;background:rgba(255,255,255,.02);transition:transform .22s ease,border-color .22s ease,background-color .22s ease}
+  .footer-links a:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.24);background:rgba(255,255,255,.06)}
+  .footer-links svg{width:1rem;height:1rem;stroke:currentColor;stroke-width:1.7;fill:none}
   .footer-links .icon-fill{fill:currentColor;stroke:none}
-  @media (max-width:760px){.mini-top{grid-template-columns:1fr auto;gap:.8rem}.menu-toggle{display:inline-flex}.main-nav{grid-column:1 / -1;display:none;flex-direction:column;align-items:stretch;padding-top:.3rem;border-top:1px solid rgba(221,213,200,.88)}.menu-open .main-nav{display:flex}.main-nav a{padding:.95rem 0;border-radius:0;background:none}.main-nav a:hover{transform:none;color:var(--orange-deep);background:none}}
-  @media (max-width:680px){.site-shell{width:min(calc(100% - 1rem),1080px);padding-top:.5rem}.footer-band{grid-template-columns:1fr;display:grid}}
+  .footer-legal{margin:0;padding-top:1rem;border-top:1px solid var(--ink-line);color:rgba(255,255,255,.42);font-size:.72rem;text-align:center}
+  @media (max-width:760px){.mini-top{grid-template-columns:1fr auto;gap:.8rem}.menu-toggle{display:inline-flex}.main-nav{grid-column:1 / -1;display:none;flex-direction:column;align-items:stretch;padding-top:.3rem;border-top:1px solid rgba(221,213,200,.88)}.menu-open .main-nav{display:flex}.main-nav a{padding:.95rem 0;border-radius:0;background:none}.main-nav a:hover{transform:none;color:var(--orange-deep);background:none}.footer-hero,.footer-shell{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-hero-copy h2{max-width:14ch}}
+  @media (max-width:680px){.site-shell{width:min(calc(100% - 1rem),1080px);padding-top:.5rem}.footer-hero,.footer-shell{grid-template-columns:1fr}.footer-band{padding:1rem}.footer-hero-visual{min-height:240px}.footer-copy{font-size:.78rem}.footer-text-link{font-size:.78rem}.footer-legal{text-align:left}}
 </style>

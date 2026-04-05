@@ -4,9 +4,13 @@
   --line: #ddd5c8;
   --paper: #f4efe7;
   --orange-deep: #5f4438;
+  --ink: #060606;
+  --ink-soft: #a8a19a;
+  --ink-line: rgba(255, 255, 255, 0.08);
+  --ink-edge: rgba(255, 255, 255, 0.05);
   --shadow: 0 24px 60px rgba(22, 14, 10, 0.08);
-  --display-font: "Iowan Old Style", "Baskerville", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --body-font: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --display-font: "Cormorant Garamond", "Iowan Old Style", "Baskerville", "Palatino Linotype", serif;
+  --body-font: "Manrope", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -25,6 +29,10 @@ body {
   font-family: var(--body-font);
   font-size: 15px;
   line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.45), transparent 24%),
     linear-gradient(180deg, #f7f3ec 0%, #f1ece3 100%);
@@ -34,7 +42,9 @@ h1,
 h2,
 h3 {
   font-family: var(--display-font);
-  font-weight: 600;
+  font-weight: 700;
+  font-kerning: normal;
+  text-wrap: balance;
 }
 
 a {
