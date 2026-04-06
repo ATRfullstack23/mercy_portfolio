@@ -6,6 +6,7 @@
   const currentYear = new Date().getFullYear();
   let menuOpen = false;
   let headerScrolled = false;
+  let headerHidden = false;
   const navLinks = [
     { label: 'Home', href: '/#top' },
     { label: 'Gallery', href: '/#archive' },
@@ -32,9 +33,13 @@
       external: false
     }
   ];
+  $: isLandingPage = $page.url.pathname === '/';
+
   onMount(() => {
     const updateHeader = () => {
-      headerScrolled = window.scrollY > Math.max(48, window.innerHeight * 0.18);
+      const scrolledPastHero = window.scrollY > Math.max(48, window.innerHeight * 0.18);
+      headerScrolled = scrolledPastHero;
+      headerHidden = window.scrollY > 24;
     };
 
     updateHeader();
@@ -45,29 +50,36 @@
 </script>
 
 <div class="site-shell">
-  <header class:menu-open={menuOpen} class:scrolled={headerScrolled} class="mini-top">
-    <div class="brand-wrap">
-      <a class="brand-name" href="/#top">Mercy Andrea</a>
-    </div>
-
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="Toggle navigation menu"
-      aria-expanded={menuOpen}
-      on:click={() => (menuOpen = !menuOpen)}
+  {#if isLandingPage}
+    <header
+      class:menu-open={menuOpen}
+      class:scrolled={headerScrolled}
+      class:hidden={headerHidden}
+      class="mini-top"
     >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <div class="brand-wrap">
+        <a class="brand-name" href="/#top">Mercy Andrea</a>
+      </div>
 
-    <nav class="main-nav">
-      {#each navLinks as link}
-        <a href={link.href} on:click={() => (menuOpen = false)}>{link.label}</a>
-      {/each}
-    </nav>
-  </header>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+        on:click={() => (menuOpen = !menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav">
+        {#each navLinks as link}
+          <a href={link.href} on:click={() => (menuOpen = false)}>{link.label}</a>
+        {/each}
+      </nav>
+    </header>
+  {/if}
 
   <slot />
 
@@ -111,7 +123,8 @@
 
 <style>
   .site-shell{width:min(calc(100% - 1.4rem),1080px);margin:0 auto;padding:.75rem 0 2rem;color:var(--text)}
-  .mini-top{position:sticky;top:.6rem;z-index:30;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:1rem;padding:.9rem 1rem;margin-bottom:.6rem;border:1px solid transparent;border-radius:1rem;background:transparent;box-shadow:none;transition:background-color .24s ease,border-color .24s ease,box-shadow .24s ease,color .24s ease}
+  .mini-top{position:sticky;top:.6rem;z-index:30;display:grid;grid-template-columns:auto 1fr;align-items:center;gap:1rem;padding:.9rem 1rem;margin-bottom:.6rem;border:1px solid transparent;border-bottom-color:rgba(17,17,17,.16);border-radius:1rem;background:transparent;box-shadow:none;transition:background-color .24s ease,border-color .24s ease,box-shadow .24s ease,color .24s ease,transform .24s ease,opacity .24s ease}
+  .mini-top.hidden{transform:translateY(calc(-100% - 1rem));opacity:0;pointer-events:none}
   .brand-wrap{display:grid;gap:.22rem}
   .brand-name{color:#171717;font-family:var(--display-font);font-size:.86rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 1px 0 rgba(255,255,255,.22);transition:color .24s ease,text-shadow .24s ease}
   .main-nav{display:flex;justify-content:flex-end;align-items:center;gap:.35rem;flex-wrap:wrap}
