@@ -5,27 +5,27 @@
   const partnerLinks = [
     {
       brand: 'Remilia Hair',
-      code: '',
+      code: 'MERCYANDREA',
       link: 'https://rstr.co/remiliahair/mercyremilia',
-      note: 'Shop Mercyâ€™s Remilia Hair favorites.'
+      note: "Shop Mercy's Remilia Hair favorites."
     },
     {
       brand: 'The Royal Codes',
-      code: '',
+      code: 'MERCYANDREA',
       link: 'https://rstr.co/theroyalcodes/464',
-      note: 'Curated access through Mercyâ€™s Royal Codes link.'
+      note: "Curated access through Mercy's Royal Codes link."
     },
     {
       brand: 'Sana',
-      code: '707',
+      code: '',
       link: 'https://sanausa.com/mercy',
-      note: 'Use code 707 at checkout.'
+      note: 'Previous Sana code expired. Contact the company for a new Mercy code.'
     },
     {
       brand: 'Canoly',
-      code: 'C16',
+      code: 'MERCYFARRELL',
       link: 'https://canoly.com/?ref=MERCYFARRELL',
-      note: 'Use code C16 for Mercyâ€™s Canoly link.'
+      note: "Use code MERCYFARRELL for Mercy's Canoly link."
     }
   ];
   const tiles = [
@@ -99,8 +99,8 @@
     const cardMap = {
       'Remilia Hair': {
         eyebrow: 'Hair Ritual',
-        badge: 'Featured',
-        note: 'Selected favorites.',
+        badge: item.code ? `Code ${item.code}` : 'Featured',
+        note: item.code ? `Code ${item.code}.` : 'Selected favorites.',
         cta: 'Shop Now',
         ctaTone: 'dark',
         emblem: true,
@@ -108,26 +108,26 @@
       },
       'The Royal Codes': {
         eyebrow: 'Jewelry Edit',
-        badge: 'Direct Link',
-        note: 'Direct link.',
+        badge: item.code ? `Code ${item.code}` : 'Direct Link',
+        note: item.code ? `Code ${item.code}.` : 'Direct link.',
         cta: 'Visit Site',
-        ctaTone: 'ghost'
-      },
-      Sana: {
-        eyebrow: 'Wellness Support',
-        badge: `Code ${item.code}`,
-        note: 'Code 707.',
-        cta: 'Shop Collection',
         ctaTone: 'ghost'
       },
       Canoly: {
         eyebrow: 'Beauty Ritual',
-        badge: `Code ${item.code}`,
-        note: 'Code C16.',
+        badge: item.code ? `Code ${item.code}` : 'Featured',
+        note: item.code ? `Code ${item.code}.` : 'Selected favorites.',
         cta: 'Discover',
         ctaTone: 'dark',
         emblem: true,
         logo: '/brands/canoly_logo-05.avif'
+      },
+      Sana: {
+        eyebrow: 'Wellness Support',
+        badge: item.code ? `Code ${item.code}` : 'Code Expired',
+        note: item.code ? `Code ${item.code}.` : 'Contact the company for a new Mercy code.',
+        cta: 'Shop Collection',
+        ctaTone: 'ghost'
       }
     };
 
